@@ -1,15 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "frontend/$1"
-    }
-  ]
+  "framework": "nextjs",
+  "buildCommand": "cd frontend && pnpm build",
+  "devCommand": "cd frontend && pnpm dev",
+  "installCommand": "cd frontend && pnpm install",
+  "outputDirectory": "frontend/.next"
 }
